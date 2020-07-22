@@ -35,7 +35,7 @@
   
     <link rel="alternate" href="/atom.xml" title="Zhiyu&#39;s blog" type="application/atom+xml">
   
-  <link rel="icon" href="/hexo-theme-hiero/css/images/favicon.ico">
+  <link rel="icon" href="/css/images/favicon.ico">
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
@@ -59,10 +59,10 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
-  <link rel="stylesheet" href="/hexo-theme-hiero/css/hiero.css" >
-  <link rel="stylesheet" href="/hexo-theme-hiero/css/glyphs.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
   
-    <link rel="stylesheet" href="/hexo-theme-hiero/css/vdonate.css" >
+    <link rel="stylesheet" href="/css/vdonate.css" >
   
 
   <!-- Custom CSS -->
@@ -106,7 +106,7 @@ var themeMenus = {};
 
           <h1 class="site-title">
             
-              <a href="/hexo-theme-hiero/" title="Zhiyu&#39;s blog" rel="home"> Zhiyu&#39;s blog </a>
+              <a href="/" title="Zhiyu&#39;s blog" rel="home"> Zhiyu&#39;s blog </a>
             
           </h1>
 
@@ -156,7 +156,7 @@ var themeMenus = {};
       if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
         document.getElementById("originBg").src=imgUrls[random];
       } else {
-        document.getElementById("originBg").src='/hexo-theme-hiero/' + imgUrls[random];
+        document.getElementById("originBg").src='/' + imgUrls[random];
       }
   }
   bgDiv=document.getElementById("originBgDiv");
@@ -256,7 +256,7 @@ var themeMenus = {};
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
-        ROOT_URL: '/hexo-theme-hiero/',
+        ROOT_URL: '/',
         CONTENT_URL: '../../../content.json',
     };
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
