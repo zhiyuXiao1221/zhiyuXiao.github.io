@@ -178,7 +178,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="../../../../gallery/原型链2.png" rel="gallery_ckcygiepu0009bwv04ml9peii">
+      <a class="article-gallery-img fancybox" href="../../../../gallery/原型链2.png" rel="gallery_ckcygws210007csv02gjzu5ya">
         <img src="../../../../gallery/原型链2.png" itemprop="image">
       </a>
     
@@ -215,33 +215,7 @@ var themeMenus = {};
 <p>在ES6之前，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来定义对象和它们的特征。</p>
 <a id="more"></a>
 <h2 id="一、ES5类的构造、继承（涉及原型链）"><a href="#一、ES5类的构造、继承（涉及原型链）" class="headerlink" title="一、ES5类的构造、继承（涉及原型链）"></a>一、ES5类的构造、继承（涉及原型链）</h2><h3 id="1-ES5的构造"><a href="#1-ES5的构造" class="headerlink" title="1.ES5的构造"></a>1.ES5的构造</h3><p>JavaScript 规定，每一个构造函数都有一个prototype 属性，指向另一个对象。注意这个prototype 就是一个对象，这个对象的所有属性和方法，都会被构造函数所拥有。可以把那些不变的方法，直接定义在prototype 对象上，这样所有对象的实例就可以共享这些方法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span>
-<span class="line">2</span>
-<span class="line">3</span>
-<span class="line">4</span>
-<span class="line">5</span>
-<span class="line">6</span>
-<span class="line">7</span>
-<span class="line">8</span>
-<span class="line">9</span>
-<span class="line">10</span>
-<span class="line">11</span>
-<span class="line">12</span>
-<span class="line">13</span>
-</pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">uname,age</span>) </span>&#123;</span>
-<span class="line">    <span class="keyword">this</span>.uname = uname;</span>
-<span class="line">    <span class="keyword">this</span>.age = age;</span>
-<span class="line">&#125;</span>
-<span class="line">	<span class="comment">//sing方法属于不变的方法，放在prototype里面</span></span>
-<span class="line">	Person.prototype.sing = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span>
-<span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.uname + <span class="string">'在唱歌'</span>);</span>
-<span class="line">	&#125;</span>
-<span class="line">	<span class="keyword">var</span> obj = <span class="keyword">new</span> Person(<span class="string">'小名'</span>,<span class="number">22</span>);</span>
-<span class="line">    <span class="comment">//静态成员：在构造函数本身添加的成员叫做静态成员</span></span>
-<span class="line">	Person.tag = <span class="string">"people"</span>;</span>
-<span class="line">	<span class="comment">//实例成员：在构造函数内部创建的成员成为实例成员，是由实例化对象来访问</span></span>
-<span class="line">	obj.tag = <span class="string">"People"</span>;</span>
-</pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">uname,age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.uname = uname;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line">	<span class="comment">//sing方法属于不变的方法，放在prototype里面</span></span><br><span class="line">	Person.prototype.sing = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.uname + <span class="string">'在唱歌'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> obj = <span class="keyword">new</span> Person(<span class="string">'小名'</span>,<span class="number">22</span>);</span><br><span class="line">    <span class="comment">//静态成员：在构造函数本身添加的成员叫做静态成员</span></span><br><span class="line">	Person.tag = <span class="string">"people"</span>;</span><br><span class="line">	<span class="comment">//实例成员：在构造函数内部创建的成员成为实例成员，是由实例化对象来访问</span></span><br><span class="line">	obj.tag = <span class="string">"People"</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="2-构造函数、原型对象和对象原型"><a href="#2-构造函数、原型对象和对象原型" class="headerlink" title="2.构造函数、原型对象和对象原型"></a>2.构造函数、原型对象和对象原型</h3><p>原型（<strong>proto</strong>）和构造函数（prototype）原型对象里面都有一个属性constructor属性，constructor 我们称为构造函数，因为它指回构造函数本身。constructor 主要用于记录该对象引用于哪个构造函数，它可以让原型对象重新指向原来的构造函数。一般情况下，对象的方法都在构造函数的原型对象中设置。如果有多个对象的方法，我们可以给原型对象采取对象形式赋值，但是这样就会覆盖构造函数原型对象原来的内容，这样修改后的原型对象constructor  就不再指向当前构造函数了。此时，我们可以在修改后的原型对象中，添加一个constructor 指向原来的构造函数。</p>
 <p><strong>总结：每一个对象都有一个原型，作用是指向原型对象prototype</strong></p>
 <p><strong><strong><strong>proto</strong></strong>主要作用是指向prototype</strong></p>
@@ -256,221 +230,17 @@ var themeMenus = {};
 <p>// console.log(Star.prototype.<strong>__proto_</strong>.<strong>__proto</strong>);<br>// console.log(Object.prototype);</p>
 <p><img src="//zhiyuXiao1221.github.io/2020/07/23/ES5以及ES6构造和继承的对比/pic2.jpg" alt="pic2"></p>
 <h3 id="4-ES5的继承"><a href="#4-ES5的继承" class="headerlink" title="4.ES5的继承"></a>4.ES5的继承</h3><h4 id="属性的继承"><a href="#属性的继承" class="headerlink" title="属性的继承"></a>属性的继承</h4><p>call()调用这个函数, 并且修改函数运行时的this 指向，fun.call(thisArg, arg1, arg2, …);call把父类的this指向子类。thisArg ：当前调用函数this 的指向对象，arg1，arg2：传递的其他参数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span>
-<span class="line">2</span>
-<span class="line">3</span>
-<span class="line">4</span>
-<span class="line">5</span>
-<span class="line">6</span>
-<span class="line">7</span>
-<span class="line">8</span>
-<span class="line">9</span>
-<span class="line">10</span>
-<span class="line">11</span>
-<span class="line">12</span>
-<span class="line">13</span>
-<span class="line">14</span>
-<span class="line">15</span>
-<span class="line">16</span>
-<span class="line">17</span>
-<span class="line">18</span>
-<span class="line">19</span>
-<span class="line">20</span>
-<span class="line">21</span>
-</pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params">uname,age</span>) </span>&#123;</span>
-<span class="line">	<span class="comment">// this指向父类的实例对象</span></span>
-<span class="line">	<span class="keyword">this</span>.uname = uname;</span>
-<span class="line">	<span class="keyword">this</span>.age = age;</span>
-<span class="line">	<span class="comment">// 只要把父类的this指向子类的this既可</span></span>
-<span class="line">&#125;</span>
-<span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params">uname, age,score</span>) </span>&#123;</span>
-<span class="line">	<span class="comment">// this指向子类构造函数</span></span>
-<span class="line">	<span class="comment">// this.uname = uname;</span></span>
-<span class="line">	<span class="comment">// this.age = age;</span></span>
-<span class="line">	<span class="comment">// Father(uname,age);</span></span>
-<span class="line">	Father.call(<span class="keyword">this</span>,uname,age);</span>
-<span class="line">	<span class="keyword">this</span>.score = score;</span>
-<span class="line">&#125;</span>
-<span class="line">Son.prototype.sing = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span>
-<span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.uname + <span class="string">'唱歌'</span>)</span>
-<span class="line">&#125;</span>
-<span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Son(<span class="string">'刘德华'</span>,<span class="number">22</span>,<span class="number">99</span>);</span>
-<span class="line"><span class="built_in">console</span>.log(obj.uname);</span>
-<span class="line"><span class="built_in">console</span>.log(obj.score);</span>
-<span class="line">obj.sing();</span>
-</pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params">uname,age</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// this指向父类的实例对象</span></span><br><span class="line">	<span class="keyword">this</span>.uname = uname;</span><br><span class="line">	<span class="keyword">this</span>.age = age;</span><br><span class="line">	<span class="comment">// 只要把父类的this指向子类的this既可</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params">uname, age,score</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// this指向子类构造函数</span></span><br><span class="line">	<span class="comment">// this.uname = uname;</span></span><br><span class="line">	<span class="comment">// this.age = age;</span></span><br><span class="line">	<span class="comment">// Father(uname,age);</span></span><br><span class="line">	Father.call(<span class="keyword">this</span>,uname,age);</span><br><span class="line">	<span class="keyword">this</span>.score = score;</span><br><span class="line">&#125;</span><br><span class="line">Son.prototype.sing = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.uname + <span class="string">'唱歌'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Son(<span class="string">'刘德华'</span>,<span class="number">22</span>,<span class="number">99</span>);</span><br><span class="line"><span class="built_in">console</span>.log(obj.uname);</span><br><span class="line"><span class="built_in">console</span>.log(obj.score);</span><br><span class="line">obj.sing();</span><br></pre></td></tr></table></figure>
 <h4 id="方法的继承"><a href="#方法的继承" class="headerlink" title="方法的继承"></a>方法的继承</h4><p><strong>实现方法把父类的实例对象保存给子类的原型对象</strong></p>
 <p>一般情况下，对象的方法都在构造函数的原型对象中设置，通过构造函数无法继承父类方法。核心原理：</p>
 <p>①将子类所共享的方法提取出来，让子类的prototype 原型对象= new 父类()  </p>
 <p>②本质：子类原型对象等于是实例化父类，因为父类实例化之后另外开辟空间，就不会影响原来父类原型对象</p>
 <p>③将子类的constructor指向子类的构造函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span>
-<span class="line">2</span>
-<span class="line">3</span>
-<span class="line">4</span>
-<span class="line">5</span>
-<span class="line">6</span>
-<span class="line">7</span>
-<span class="line">8</span>
-<span class="line">9</span>
-<span class="line">10</span>
-<span class="line">11</span>
-<span class="line">12</span>
-<span class="line">13</span>
-<span class="line">14</span>
-<span class="line">15</span>
-<span class="line">16</span>
-<span class="line">17</span>
-<span class="line">18</span>
-<span class="line">19</span>
-<span class="line">20</span>
-<span class="line">21</span>
-</pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params"></span>) </span>&#123;</span>
-<span class="line">&#125;</span>
-<span class="line">Father.prototype.chang = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span>
-<span class="line">	<span class="built_in">console</span>.log(<span class="string">'唱歌'</span>);</span>
-<span class="line">&#125;</span>
-<span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params"></span>) </span>&#123;</span>
-<span class="line"></span>
-<span class="line">&#125;</span>
-<span class="line"><span class="comment">// Son.prototype = Father.prototype;</span></span>
-<span class="line">Son.prototype = <span class="keyword">new</span> Father();</span>
-<span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Son();</span>
-<span class="line">obj.chang();</span>
-<span class="line"></span>
-<span class="line">Son.prototype.score = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span>
-<span class="line">	<span class="built_in">console</span>.log(<span class="string">'考试'</span>);</span>
-<span class="line">&#125;</span>
-<span class="line"><span class="comment">//实现继承后，让Son指回原构造函数</span></span>
-<span class="line">Son.prototype.constructor = Son;</span>
-<span class="line"><span class="comment">// obj.score();</span></span>
-<span class="line"><span class="comment">// console.log(Son.prototype);</span></span>
-<span class="line"><span class="built_in">console</span>.log(Father.prototype);</span>
-</pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.chang = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'唱歌'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Son.prototype = Father.prototype;</span></span><br><span class="line">Son.prototype = <span class="keyword">new</span> Father();</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Son();</span><br><span class="line">obj.chang();</span><br><span class="line"></span><br><span class="line">Son.prototype.score = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'考试'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实现继承后，让Son指回原构造函数</span></span><br><span class="line">Son.prototype.constructor = Son;</span><br><span class="line"><span class="comment">// obj.score();</span></span><br><span class="line"><span class="comment">// console.log(Son.prototype);</span></span><br><span class="line"><span class="built_in">console</span>.log(Father.prototype);</span><br></pre></td></tr></table></figure>
 <h2 id="二、ES6的构造和继承"><a href="#二、ES6的构造和继承" class="headerlink" title="二、ES6的构造和继承"></a>二、ES6的构造和继承</h2><h3 id="1-ES6构造"><a href="#1-ES6构造" class="headerlink" title="1.ES6构造"></a>1.ES6构造</h3><p>类有对象的公共属性和方法，用class创建，class里面包含constructor和方法，我们把公共属性放到constructor里面，把公共方法直接往后写既可，但是不要加逗号</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span>
-<span class="line">2</span>
-<span class="line">3</span>
-<span class="line">4</span>
-<span class="line">5</span>
-<span class="line">6</span>
-<span class="line">7</span>
-<span class="line">8</span>
-<span class="line">9</span>
-<span class="line">10</span>
-<span class="line">11</span>
-<span class="line">12</span>
-<span class="line">13</span>
-<span class="line">14</span>
-<span class="line">15</span>
-<span class="line">16</span>
-<span class="line">17</span>
-<span class="line">18</span>
-<span class="line">19</span>
-<span class="line">20</span>
-<span class="line">21</span>
-<span class="line">22</span>
-<span class="line">23</span>
-</pre></td><td class="code"><pre><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Star</span> </span>&#123;</span>
-<span class="line">    <span class="comment">// 特别注意：类里面直接方法，不加function关键字</span></span>
-<span class="line">    <span class="keyword">constructor</span>(uname, age) &#123;</span>
-<span class="line">        <span class="comment">// this：代表当前实例对象，构造函数里面的this指向实例对象</span></span>
-<span class="line">        <span class="comment">// uname和age都是属性</span></span>
-<span class="line">        <span class="keyword">this</span>.uname = uname;</span>
-<span class="line">        <span class="keyword">this</span>.age = age;</span>
-<span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span>
-<span class="line">    &#125;</span>
-<span class="line">    say() &#123;</span>
-<span class="line">        <span class="built_in">console</span>.log(<span class="string">'say'</span>);</span>
-<span class="line">    &#125;</span>
-<span class="line">    jump() &#123;</span>
-<span class="line">        <span class="built_in">console</span>.log(<span class="string">'jump'</span>);</span>
-<span class="line">    &#125;</span>
-<span class="line"></span>
-<span class="line">&#125;</span>
-<span class="line"><span class="keyword">var</span> o1 = <span class="keyword">new</span> Star(<span class="string">'张三丰'</span>, <span class="number">19</span>);</span>
-<span class="line"><span class="built_in">console</span>.log(o1);</span>
-<span class="line"><span class="keyword">var</span> o2 = <span class="keyword">new</span> Star(<span class="string">'李寻欢'</span>, <span class="number">21</span>);</span>
-<span class="line"><span class="built_in">console</span>.log(o2);</span>
-<span class="line">o2.say();</span>
-<span class="line">o1.jumo();</span>
-</pre></td></tr></table></figure>
-<h3 id="2-ES6继承"><a href="#2-ES6继承" class="headerlink" title="2.ES6继承"></a>2.ES6继承</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span>
-<span class="line">2</span>
-<span class="line">3</span>
-<span class="line">4</span>
-<span class="line">5</span>
-<span class="line">6</span>
-<span class="line">7</span>
-<span class="line">8</span>
-<span class="line">9</span>
-<span class="line">10</span>
-<span class="line">11</span>
-<span class="line">12</span>
-<span class="line">13</span>
-<span class="line">14</span>
-<span class="line">15</span>
-<span class="line">16</span>
-<span class="line">17</span>
-<span class="line">18</span>
-<span class="line">19</span>
-<span class="line">20</span>
-<span class="line">21</span>
-<span class="line">22</span>
-<span class="line">23</span>
-<span class="line">24</span>
-<span class="line">25</span>
-<span class="line">26</span>
-<span class="line">27</span>
-<span class="line">28</span>
-<span class="line">29</span>
-<span class="line">30</span>
-<span class="line">31</span>
-<span class="line">32</span>
-</pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类</span></span>
-<span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father</span> </span>&#123;</span>
-<span class="line"> 	<span class="keyword">constructor</span> (uname, age) &#123;</span>
-<span class="line">		<span class="keyword">this</span>.uname = uname;</span>
-<span class="line">		<span class="keyword">this</span>.age = age;</span>
-<span class="line">	&#125;</span>
-<span class="line"> 	qian () &#123;</span>
-<span class="line">		<span class="built_in">console</span>.log(<span class="string">'一个亿'</span>);</span>
-<span class="line"> 	&#125;</span>
-<span class="line"> &#125;</span>
-<span class="line"><span class="comment">//  子类</span></span>
-<span class="line"><span class="comment">//  extends：申明一个类为子类，继承另外一个类</span></span>
-<span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</span>
-<span class="line"><span class="comment">// 子类需要添加自己的属性的时候，需要把参数都接受</span></span>
-<span class="line">	<span class="keyword">constructor</span> (uname, age, score) &#123;</span>
-<span class="line">   <span class="keyword">super</span>：调用父类的构造方法和普通方法</span>
-<span class="line"> 		<span class="keyword">super</span>(uname, age);</span>
-<span class="line"> 		<span class="keyword">this</span>.score = score;<span class="comment">// 不可以额外直接定义属性，因为this指向不同</span></span>
-<span class="line"> 	&#125;</span>
-<span class="line"> 	qian () &#123;</span>
-<span class="line"> 		<span class="comment">// 继续调用父类的qian方法</span></span>
-<span class="line">		<span class="keyword">super</span>.qian();</span>
-<span class="line">		<span class="built_in">console</span>.log(<span class="string">'两毛钱'</span>);</span>
-<span class="line"> 	&#125;</span>
-<span class="line"> 	<span class="comment">// super：调用父类的普通方法和构造方法</span></span>
-<span class="line"> 	<span class="comment">// 构造方法：super(参数，参数)</span></span>
-<span class="line"> 	<span class="comment">// 普通方法：super.fangfa();</span></span>
-<span class="line">&#125;</span>
-<span class="line"><span class="comment">// 已经继承好的话，那么Son也有姓名年龄属性等</span></span>
-<span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> Son(<span class="string">'儿子'</span>, <span class="number">6</span>, <span class="number">66</span>);</span>
-<span class="line"><span class="built_in">console</span>.log( o );</span>
-<span class="line">o.qian();<span class="comment">// 继承后，如果子类和父类有同名的方法，那么就近原则</span></span>
-</pre></td></tr></table></figure>
-<h2 id="三、类的本质"><a href="#三、类的本质" class="headerlink" title="三、类的本质"></a>三、类的本质</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span>
-<span class="line">2</span>
-<span class="line">3</span>
-<span class="line">4</span>
-<span class="line">5</span>
-</pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Star</span> </span>&#123; &#125;</span>
-<span class="line">       <span class="built_in">console</span>.log(<span class="string">"type of star is:"</span> + <span class="keyword">typeof</span> Star);  <span class="comment">//function</span></span>
-<span class="line">       <span class="keyword">var</span> obj = <span class="keyword">new</span> Star(); </span>
-<span class="line">       <span class="built_in">console</span>.log(obj.__proto__); <span class="comment">//这两者一致</span></span>
-<span class="line">       <span class="built_in">console</span>.log(Star.prototype);</span>
-</pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Star</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 特别注意：类里面直接方法，不加function关键字</span></span><br><span class="line">    <span class="keyword">constructor</span>(uname, age) &#123;</span><br><span class="line">        <span class="comment">// this：代表当前实例对象，构造函数里面的this指向实例对象</span></span><br><span class="line">        <span class="comment">// uname和age都是属性</span></span><br><span class="line">        <span class="keyword">this</span>.uname = uname;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    say() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'say'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    jump() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'jump'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o1 = <span class="keyword">new</span> Star(<span class="string">'张三丰'</span>, <span class="number">19</span>);</span><br><span class="line"><span class="built_in">console</span>.log(o1);</span><br><span class="line"><span class="keyword">var</span> o2 = <span class="keyword">new</span> Star(<span class="string">'李寻欢'</span>, <span class="number">21</span>);</span><br><span class="line"><span class="built_in">console</span>.log(o2);</span><br><span class="line">o2.say();</span><br><span class="line">o1.jumo();</span><br></pre></td></tr></table></figure>
+<h3 id="2-ES6继承"><a href="#2-ES6继承" class="headerlink" title="2.ES6继承"></a>2.ES6继承</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father</span> </span>&#123;</span><br><span class="line"> 	<span class="keyword">constructor</span> (uname, age) &#123;</span><br><span class="line">		<span class="keyword">this</span>.uname = uname;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line"> 	qian () &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'一个亿'</span>);</span><br><span class="line"> 	&#125;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="comment">//  子类</span></span><br><span class="line"><span class="comment">//  extends：申明一个类为子类，继承另外一个类</span></span><br><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</span><br><span class="line"><span class="comment">// 子类需要添加自己的属性的时候，需要把参数都接受</span></span><br><span class="line">	<span class="keyword">constructor</span> (uname, age, score) &#123;</span><br><span class="line">   <span class="keyword">super</span>：调用父类的构造方法和普通方法</span><br><span class="line"> 		<span class="keyword">super</span>(uname, age);</span><br><span class="line"> 		<span class="keyword">this</span>.score = score;<span class="comment">// 不可以额外直接定义属性，因为this指向不同</span></span><br><span class="line"> 	&#125;</span><br><span class="line"> 	qian () &#123;</span><br><span class="line"> 		<span class="comment">// 继续调用父类的qian方法</span></span><br><span class="line">		<span class="keyword">super</span>.qian();</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'两毛钱'</span>);</span><br><span class="line"> 	&#125;</span><br><span class="line"> 	<span class="comment">// super：调用父类的普通方法和构造方法</span></span><br><span class="line"> 	<span class="comment">// 构造方法：super(参数，参数)</span></span><br><span class="line"> 	<span class="comment">// 普通方法：super.fangfa();</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 已经继承好的话，那么Son也有姓名年龄属性等</span></span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> Son(<span class="string">'儿子'</span>, <span class="number">6</span>, <span class="number">66</span>);</span><br><span class="line"><span class="built_in">console</span>.log( o );</span><br><span class="line">o.qian();<span class="comment">// 继承后，如果子类和父类有同名的方法，那么就近原则</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、类的本质"><a href="#三、类的本质" class="headerlink" title="三、类的本质"></a>三、类的本质</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Star</span> </span>&#123; &#125;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">"type of star is:"</span> + <span class="keyword">typeof</span> Star);  <span class="comment">//function</span></span><br><span class="line">       <span class="keyword">var</span> obj = <span class="keyword">new</span> Star(); </span><br><span class="line">       <span class="built_in">console</span>.log(obj.__proto__); <span class="comment">//这两者一致</span></span><br><span class="line">       <span class="built_in">console</span>.log(Star.prototype);</span><br></pre></td></tr></table></figure>
 <p>所有得到总结：class本质还是function，类的所有方法都定义在类的prototype属性上</p>
 <p>类创建的实例,里面也有<strong>proto</strong> 指向类的prototype原型对象。所以ES6的类它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。</p>
 <p>所以ES6的类其实就是语法糖.语法糖:语法糖就是一种便捷写法.   简单理解, 有两种方法可以实现同样的功能, 但是一种写法更加清晰、方便,那么这个方法就是语法糖</p>
