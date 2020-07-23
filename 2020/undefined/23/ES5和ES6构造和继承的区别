@@ -6,10 +6,10 @@
   <!-- PACE Progress Bar START -->
   
     
-<script src="../https:/raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+<script src="../../../https:/raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
 
     
-<link rel="stylesheet" href="../https:/github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+<link rel="stylesheet" href="../../../https:/github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
 
   
   
@@ -28,17 +28,17 @@
   <meta name="description" content="在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念。 ES6，全称ECMAScript6.0 ，2015.06 发版。但是目前浏览器的JavaScript 是ES5 版本，大多数高版本的浏览器也支持ES6，不过只实现了ES6 的部分特性和功能。 在ES6之前，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES5和ES6构造和继承的区别">
-<meta property="og:url" content="https://zhiyuxiao1221.github.io/2020/index.html">
+<meta property="og:url" content="https://zhiyuxiao1221.github.io/2020/undefined/23/ES5%E5%92%8CES6%E6%9E%84%E9%80%A0%E5%92%8C%E7%BB%A7%E6%89%BF%E7%9A%84%E5%8C%BA%E5%88%AB">
 <meta property="og:site_name" content="Zhiyu&#39;s blog">
 <meta property="og:description" content="在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念。 ES6，全称ECMAScript6.0 ，2015.06 发版。但是目前浏览器的JavaScript 是ES5 版本，大多数高版本的浏览器也支持ES6，不过只实现了ES6 的部分特性和功能。 在ES6之前，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zhiyuxiao1221.github.io/2020/gallery/%E5%8E%9F%E5%9E%8B%E9%93%BE2.png">
+<meta property="og:image" content="https://zhiyuxiao1221.github.io/2020/undefined/23/gallery/%E5%8E%9F%E5%9E%8B%E9%93%BE2.png">
 <meta property="article:published_time" content="2020-07-23T03:20:29.000Z">
 <meta property="article:modified_time" content="2020-07-23T04:02:29.245Z">
 <meta property="article:author" content="Zhiyu">
 <meta property="article:tag" content="Java script">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zhiyuxiao1221.github.io/2020/gallery/%E5%8E%9F%E5%9E%8B%E9%93%BE2.png">
+<meta name="twitter:image" content="https://zhiyuxiao1221.github.io/2020/undefined/23/gallery/%E5%8E%9F%E5%9E%8B%E9%93%BE2.png">
   
     <link rel="alternate" href="/atom.xml" title="Zhiyu&#39;s blog" type="application/atom+xml">
   
@@ -57,11 +57,11 @@
     
   <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
   
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../../../css/style.css">
 
 
   
-<script src="../https:/code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../../../https:/code.jquery.com/jquery-3.1.1.min.js"></script>
 
 
   <!-- Bootstrap core CSS -->
@@ -74,7 +74,7 @@
 
   <!-- Custom CSS -->
   
-<link rel="stylesheet" href="../css/my.css">
+<link rel="stylesheet" href="../../../css/my.css">
 
   <!-- Google Adsense -->
   
@@ -91,15 +91,15 @@
 <script>
 var themeMenus = {};
 
-  themeMenus["../index.html"] = "Home"; 
+  themeMenus["../../../index.html"] = "Home"; 
 
-  themeMenus["../archives"] = "Archives"; 
+  themeMenus["../../../archives"] = "Archives"; 
 
-  themeMenus["../categories"] = "Categories"; 
+  themeMenus["../../../categories"] = "Categories"; 
 
-  themeMenus["../tags"] = "Tags"; 
+  themeMenus["../../../tags"] = "Tags"; 
 
-  themeMenus["../about"] = "About"; 
+  themeMenus["../../../about"] = "About"; 
 
 </script>
 
@@ -128,15 +128,15 @@ var themeMenus = {};
 
               <ul id="main-nav" class="nmenu sf-js-enabled">
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../index.html">Home</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../../../index.html">Home</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../archives">Archives</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../../../archives">Archives</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../categories">Categories</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../../../categories">Categories</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../tags">Tags</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../../../tags">Tags</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../about">About</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="../../../about">About</a> </li>
                     
               </ul>
             </div>
@@ -188,8 +188,8 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="../gallery/%E5%8E%9F%E5%9E%8B%E9%93%BE2.png" rel="gallery_ckcy9sust0009h4v0f5edfilj">
-        <img src="../gallery/%E5%8E%9F%E5%9E%8B%E9%93%BE2.png" itemprop="image">
+      <a class="article-gallery-img fancybox" href="../../../gallery/%E5%8E%9F%E5%9E%8B%E9%93%BE2.png" rel="gallery_ckcyacj7s0007xov0enamc4ng">
+        <img src="../../../gallery/%E5%8E%9F%E5%9E%8B%E9%93%BE2.png" itemprop="image">
       </a>
     
   </div>
@@ -273,17 +273,17 @@ var themeMenus = {};
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="../categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    <a class="article-category-link" href="../../../categories/%E5%89%8D%E7%AB%AF/">前端</a>
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../tags/Java-script/" rel="tag">Java script</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../tags/Java-script/" rel="tag">Java script</a></li></ul>
 
       
         <div id="donation_div"></div>
 
 
-<script src="../js/vdonate.js"></script>
+<script src="../../../js/vdonate.js"></script>
 
 <script>
 var a = new Donate({
@@ -328,7 +328,7 @@ var a = new Donate({
 <nav id="article-nav">
   
   
-    <a href="../2016/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../../../2016/undefined/20/Being-Outside-in-Fresh-Air-and-How-Your-Body-Loves-It" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Being Outside in Fresh Air &amp; How Your Body Loves It</div>
     </a>
@@ -381,20 +381,20 @@ var a = new Donate({
 
 <!-- Custome JS -->
 
-<script src="../js/my.js"></script>
+<script src="../../../js/my.js"></script>
 
     </div>
     <!-- <nav id="mobile-nav">
   
-    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="../../../index.html" class="mobile-nav-link">Home</a>
   
-    <a href="../archives" class="mobile-nav-link">Archives</a>
+    <a href="../../../archives" class="mobile-nav-link">Archives</a>
   
-    <a href="../categories" class="mobile-nav-link">Categories</a>
+    <a href="../../../categories" class="mobile-nav-link">Categories</a>
   
-    <a href="../tags" class="mobile-nav-link">Tags</a>
+    <a href="../../../tags" class="mobile-nav-link">Tags</a>
   
-    <a href="../about" class="mobile-nav-link">About</a>
+    <a href="../../../about" class="mobile-nav-link">About</a>
   
 </nav> -->
     
@@ -433,21 +433,21 @@ var a = new Donate({
 
 
   
-<link rel="stylesheet" href="../https:/cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+<link rel="stylesheet" href="../../../https:/cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 
   
-<script src="../https:/cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="../../../https:/cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 
 
 
-<script src="../js/scripts.js"></script>
+<script src="../../../js/scripts.js"></script>
 
 
-<script src="../https:/stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../../https:/stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-<script src="../js/main.js"></script>
+<script src="../../../js/main.js"></script>
 
 
 
