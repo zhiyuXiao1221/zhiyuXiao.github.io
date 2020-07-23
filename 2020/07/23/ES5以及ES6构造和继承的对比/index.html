@@ -178,7 +178,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="../../../../gallery/原型链2.png" rel="gallery_ckcyfgc7i0008xgv041emacjv">
+      <a class="article-gallery-img fancybox" href="../../../../gallery/原型链2.png" rel="gallery_ckcyftql2000aswv0q7evnyes">
         <img src="../../../../gallery/原型链2.png" itemprop="image">
       </a>
     
@@ -220,7 +220,7 @@ var themeMenus = {};
 <p><strong>总结：每一个对象都有一个原型，作用是指向原型对象prototype</strong></p>
 <p><strong><strong><strong>proto</strong></strong>主要作用是指向prototype</strong></p>
 <p><strong>constructor是指回构造函数</strong></p>
-<p><img src="/.io//pic1.jpg" alt="pic1"></p>
+<p><img src="//zhiyuXiao1221.github.io/2020/07/23/ES5以及ES6构造和继承的对比/pic1.jpg" alt="pic1"></p>
 <h3 id="3-原型链"><a href="#3-原型链" class="headerlink" title="3.原型链"></a>3.原型链</h3><p>作用：提供一个成员的查找机制，或者查找规则</p>
 <p>当访问一个对象的属性（包括方法）时，首先查找这个对象自身有没有该属性。</p>
 <p>如果没有就查找它的原型（也就是<strong>__proto_</strong>指向的prototype 原型对象）。</p>
@@ -228,7 +228,7 @@ var themeMenus = {};
 <p>依此类推一直找到Object 为止（null）。</p>
 <p><strong>__proto_</strong>对象原型的意义就在于为对象成员查找机制提供一个方向，或者说一条路线。</p>
 <p>// console.log(Star.prototype.<strong>__proto_</strong>.<strong>__proto</strong>);<br>// console.log(Object.prototype);</p>
-<p><img src="/.io//pic2.jpg" alt="pic2"></p>
+<p><img src="//zhiyuXiao1221.github.io/2020/07/23/ES5以及ES6构造和继承的对比/pic2.jpg" alt="pic2"></p>
 <h3 id="4-ES5的继承"><a href="#4-ES5的继承" class="headerlink" title="4.ES5的继承"></a>4.ES5的继承</h3><h4 id="属性的继承"><a href="#属性的继承" class="headerlink" title="属性的继承"></a>属性的继承</h4><p>call()调用这个函数, 并且修改函数运行时的this 指向，fun.call(thisArg, arg1, arg2, …);call把父类的this指向子类。thisArg ：当前调用函数this 的指向对象，arg1，arg2：传递的其他参数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params">uname,age</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// this指向父类的实例对象</span></span><br><span class="line">	<span class="keyword">this</span>.uname = uname;</span><br><span class="line">	<span class="keyword">this</span>.age = age;</span><br><span class="line">	<span class="comment">// 只要把父类的this指向子类的this既可</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params">uname, age,score</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// this指向子类构造函数</span></span><br><span class="line">	<span class="comment">// this.uname = uname;</span></span><br><span class="line">	<span class="comment">// this.age = age;</span></span><br><span class="line">	<span class="comment">// Father(uname,age);</span></span><br><span class="line">	Father.call(<span class="keyword">this</span>,uname,age);</span><br><span class="line">	<span class="keyword">this</span>.score = score;</span><br><span class="line">&#125;</span><br><span class="line">Son.prototype.sing = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.uname + <span class="string">'唱歌'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Son(<span class="string">'刘德华'</span>,<span class="number">22</span>,<span class="number">99</span>);</span><br><span class="line"><span class="built_in">console</span>.log(obj.uname);</span><br><span class="line"><span class="built_in">console</span>.log(obj.score);</span><br><span class="line">obj.sing();</span><br></pre></td></tr></table></figure>
 <p>####方法的继承</p>
