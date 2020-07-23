@@ -19,15 +19,18 @@
   
   
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="Hillary Clinton delivered her concession speech this morning in New York City. In the speech, Clinton thanked Tim Kaine and Anne Holton, her family, and the Obamas for all their support on the campaig">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hillary Clinton Calls for Unity in Concession Speech">
 <meta property="og:url" content="https://zhiyuXiao1221.github.io/2016/undefined/18/Hillary Clinton Calls for Unity in Concession Speech">
 <meta property="og:site_name" content="Zhiyu&#39;s blog">
+<meta property="og:description" content="Hillary Clinton delivered her concession speech this morning in New York City. In the speech, Clinton thanked Tim Kaine and Anne Holton, her family, and the Obamas for all their support on the campaig">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://hillaryclintonspeeches.files.wordpress.com/2016/11/10clinton2-master768.jpg">
 <meta property="og:updated_time" content="2018-01-26T06:41:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hillary Clinton Calls for Unity in Concession Speech">
+<meta name="twitter:description" content="Hillary Clinton delivered her concession speech this morning in New York City. In the speech, Clinton thanked Tim Kaine and Anne Holton, her family, and the Obamas for all their support on the campaig">
 <meta name="twitter:image" content="https://hillaryclintonspeeches.files.wordpress.com/2016/11/10clinton2-master768.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Zhiyu&#39;s blog" type="application/atom+xml">
@@ -172,7 +175,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="https://hillaryclintonspeeches.files.wordpress.com/2016/11/10clinton2-master768.jpg" rel="gallery_ckcyd083l000ivkv08pxxaprv">
+      <a class="article-gallery-img fancybox" href="https://hillaryclintonspeeches.files.wordpress.com/2016/11/10clinton2-master768.jpg" rel="gallery_ckcydac7i000i2wv0epy3jx3g">
         <img src="https://hillaryclintonspeeches.files.wordpress.com/2016/11/10clinton2-master768.jpg" itemprop="image">
       </a>
     
@@ -204,7 +207,7 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p>Hillary Clinton delivered her concession speech this morning in New York City. In the speech, Clinton thanked Tim Kaine and Anne Holton, her family, and the Obamas for all their support on the campaign trail. She also thanked her staff, campaign volunteers, and everyone who has supported the campaign by voting or donating. Clinton asked that everyone not be discouraged by the results saying that she hopes Donald Trump will be “a successful president for all Americans.” She urged everyone to keep fighting for what they believe in saying, “This loss hurts, but please never stop believing that fighting for what’s right is worth it. It is, it is worth it. And so we need — we need you to keep up these fights now and for the rest of your lives. And to all the women, and especially the young women, who put their faith in this campaign and in me: I want you to know that nothing has made me prouder than to be your champion.” A video and transcript of Clinton’s speech is below.<p></p>
+        <p>Hillary Clinton delivered her concession speech this morning in New York City. In the speech, Clinton thanked Tim Kaine and Anne Holton, her family, and the Obamas for all their support on the campaign trail. She also thanked her staff, campaign volunteers, and everyone who has supported the campaign by voting or donating. Clinton asked that everyone not be discouraged by the results saying that she hopes Donald Trump will be “a successful president for all Americans.” She urged everyone to keep fighting for what they believe in saying, “This loss hurts, but please never stop believing that fighting for what’s right is worth it. It is, it is worth it. And so we need — we need you to keep up these fights now and for the rest of your lives. And to all the women, and especially the young women, who put their faith in this campaign and in me: I want you to know that nothing has made me prouder than to be your champion.” A video and transcript of Clinton’s speech is below.</p>
 <a id="more"></a>
 <h2 id="TRANSCRIPT"><a href="#TRANSCRIPT" class="headerlink" title="TRANSCRIPT:"></a>TRANSCRIPT:</h2><p>Thank you. Thank you all very much. Thank you so much. A very rowdy group. Thank you, my friends. Thank you. Thank you.</p>
 <p>Thank you so very much for being here. I love you all, too. Last night I congratulated Donald Trump and offered to work with him on behalf of our country.</p>
@@ -266,12 +269,7 @@ var themeMenus = {};
 <h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><ul>
 <li><a href="https://hillaryspeeches.com/2016/11/09/hillary-clinton-calls-for-unity-in-concession-speech/" target="_blank" rel="noopener">General Election Results</a></li>
 </ul>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>
+
       
     </div>
     <footer class="entry-meta entry-footer">

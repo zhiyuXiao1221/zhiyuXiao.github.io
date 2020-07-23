@@ -19,15 +19,18 @@
   
   
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="Alongside the benefits, AI will also bring dangers, like powerful autonomous weapons, or new ways for the few to oppress the many. Stephen Hawkingwww.cam.ac.uk Artificial intelligence has the power to">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Stephen Hawking launches Centre for the Future of Intelligence">
 <meta property="og:url" content="https://zhiyuXiao1221.github.io/2016/undefined/18/Stephen-Hawking">
 <meta property="og:site_name" content="Zhiyu&#39;s blog">
+<meta property="og:description" content="Alongside the benefits, AI will also bring dangers, like powerful autonomous weapons, or new ways for the few to oppress the many. Stephen Hawkingwww.cam.ac.uk Artificial intelligence has the power to">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zhiyuxiao1221.github.io/2016/undefined/18/gallery/confederate_newspaper.png">
 <meta property="og:updated_time" content="2018-01-26T06:41:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Stephen Hawking launches Centre for the Future of Intelligence">
+<meta name="twitter:description" content="Alongside the benefits, AI will also bring dangers, like powerful autonomous weapons, or new ways for the few to oppress the many. Stephen Hawkingwww.cam.ac.uk Artificial intelligence has the power to">
 <meta name="twitter:image" content="https://zhiyuxiao1221.github.io/2016/undefined/18/gallery/confederate_newspaper.png">
   
     <link rel="alternate" href="/atom.xml" title="Zhiyu&#39;s blog" type="application/atom+xml">
@@ -172,7 +175,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="../../../gallery/confederate_newspaper.png" rel="gallery_ckcyd08450010vkv0tk6n8tml">
+      <a class="article-gallery-img fancybox" href="../../../gallery/confederate_newspaper.png" rel="gallery_ckcydac8000102wv08e7w9t6u">
         <img src="../../../gallery/confederate_newspaper.png" itemprop="image">
       </a>
     
@@ -204,8 +207,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <blockquote><p>Alongside the benefits, AI will also bring dangers, like powerful autonomous weapons, or new ways for the few to oppress the many.</p>
-<footer><strong>Stephen Hawking</strong><cite><a href="http://www.cam.ac.uk/research/news/the-best-or-worst-thing-to-happen-to-humanity-stephen-hawking-launches-centre-for-the-future-of" target="_blank" rel="noopener">www.cam.ac.uk</a></cite></footer>
+        <blockquote><p>Alongside the benefits, AI will also bring dangers, like powerful autonomous weapons, or new ways for the few to oppress the many.</p>
+<footer><strong>Stephen Hawking</strong><cite><a href="http://www.cam.ac.uk/research/news/the-best-or-worst-thing-to-happen-to-humanity-stephen-hawking-launches-centre-for-the-future-of" target="_blank" rel="noopener">www.cam.ac.uk</a></cite></footer></blockquote>
 <p>Artificial intelligence has the power to eradicate poverty and disease or hasten the end of human civilisation as we know it – according to a speech delivered by Professor Stephen Hawking this evening.</p>
 <blockquote class="pullquote right"><p>Alongside the benefits, AI will also bring dangers, like powerful autonomous weapons, or new ways for the few to oppress the many.</p>
 </blockquote>
@@ -235,12 +238,7 @@ var themeMenus = {};
 <p>但是，它也可能是人类文明史的终结，除非我们学会如何避免它所带来的危害。人工智能在带来益处的同时，也带来危险，比如强大的自动武器，或少数人欺压多数人的新方法。它也可能给我们的经济带来巨大的破坏。将来，人工智能可能会发展出来它自己的意志——一个与人类相冲突的意志。</p>
 <p>总之，人工智能的强力崛起，在人类历史上，可能是最好的，也可能是最糟糕的。而我们尚且不知道会是哪一个。这是为什么在2014年，我和其它几个人呼吁在这个领域进行更多研究。令我欣慰的是，有人听到了我的呼声！</p>
 <p>这个中心的研究，对我们人类文明的将来，对我们人类这个物种而言，都是极其关键的。祝大家好运！</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>
+
       
     </div>
     <footer class="entry-meta entry-footer">

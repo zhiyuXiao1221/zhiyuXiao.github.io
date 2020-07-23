@@ -21,16 +21,19 @@
   
   
   
-  <meta name="keywords" content="Hexo">
+  <meta name="description" content="Hiker主题预览Hiker is an attractive theme for Hexo. called “Hiker”, short for “HikerNews”.">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hiker主题预览">
 <meta property="og:url" content="https://zhiyuXiao1221.github.io/2016/undefined/24/Hiker主题预览">
 <meta property="og:site_name" content="Zhiyu&#39;s blog">
+<meta property="og:description" content="Hiker主题预览Hiker is an attractive theme for Hexo. called “Hiker”, short for “HikerNews”.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png">
 <meta property="og:updated_time" content="2018-01-26T06:41:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hiker主题预览">
+<meta name="twitter:description" content="Hiker主题预览Hiker is an attractive theme for Hexo. called “Hiker”, short for “HikerNews”.">
 <meta name="twitter:image" content="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png">
   
     <link rel="alternate" href="/atom.xml" title="Zhiyu&#39;s blog" type="application/atom+xml">
@@ -175,7 +178,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png" rel="gallery_ckcyd083h000fvkv0zhoobji9">
+      <a class="article-gallery-img fancybox" href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png" rel="gallery_ckcydac7f000f2wv0se7vvgfp">
         <img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png" itemprop="image">
       </a>
     
@@ -207,26 +210,21 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <h2 id="Hiker主题预览"><a href="#Hiker主题预览" class="headerlink" title="Hiker主题预览"></a>Hiker主题预览<p>Hiker is an attractive theme for <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>. called “Hiker”, short for “HikerNews”. </p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/article-chrome.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/article-chrome.png" alt></a></p>
+        <h2 id="Hiker主题预览"><a href="#Hiker主题预览" class="headerlink" title="Hiker主题预览"></a>Hiker主题预览</h2><p>Hiker is an attractive theme for <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>. called “Hiker”, short for “HikerNews”. </p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/article-chrome.png" alt></p>
 <a id="more"></a>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/home-no-background1.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/home-no-background1.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/home-no-background2.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/home-no-background2.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/archive-safari-green.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/archive-safari-green.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-safari.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-safari.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/code-theme-default.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/code-theme-default.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/fullscreen-code-theme-default.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/fullscreen-code-theme-default.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/article-safari.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/article-safari.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/code-theme-default.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/code-theme-default.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/fullscreen-article-chrome.png" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/fullscreen-article-chrome.png" alt></a></p>
-<p><a href="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/night-mode.gif" class="gallery-item" target="_blank" rel="noopener"><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/night-mode.gif" alt></a></p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/home-no-background1.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/home-no-background2.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/archive-safari-green.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-safari.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/code-theme-default.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/fullscreen-code-theme-default.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/article-safari.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/code-theme-default.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/fullscreen-article-chrome.png" alt></p>
+<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/night-mode.gif" alt></p>
+
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -310,7 +308,7 @@ var a = new Donate({
     <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav">None</ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hiker主题预览"><span class="nav-number">1.</span> <span class="nav-text">Hiker主题预览</span></a></li></ol>
     
     </div>
   </aside>
