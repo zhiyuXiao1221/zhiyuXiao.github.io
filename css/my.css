@@ -7,6 +7,10 @@ type your custom css here
     background-image: url(../../images/overlay.png), linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4);
 }
 
+.site-description {
+    color: #ffe4b4;
+}
+
 #main-navigation .sf-menu {
     background-color: null;
 }
@@ -55,4 +59,40 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
     background: #ffe4b4;
     border-color: #ffe4b4;
+}
+
+#main-navigation li a:hover,
+#main-navigation li.sfHover>a,
+#main-navigation li.current_page_item>a,
+#main-navigation li.current-menu-item>a,
+#main-navigation li.current-menu-parent>a,
+#main-navigation li.current-page-parent>a,
+#main-navigation li.current-page-ancestor>a,
+#main-navigation li.current_page_ancestor>a {
+    background: #ffe4b4;
+}
+
+#main-navigation .sf-menu {
+    background: null;
+}
+
+#main-navigation .sf-menu>ul>li:after:hover {
+    color: #666;
+}
+
+.widget li a:hover {
+    color: #e37b7c;
+}
+
+.widget_athemes_tabs .widget ul li a:hover {
+    color: #e37b7c;
+}
+
+.archives-category-wrap blockquote a:hover {
+    color: #e37b7c;
+}
+
+.widget a:hover {
+    color: #e37b7c;
+    text-decoration: none;
 }
