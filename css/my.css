@@ -3,3 +3,56 @@ type your custom css here
 在本文件键入您的自定义CSS
 升级主题文件时请注意保护本文件，防止意外覆盖。
 */
+.site-header {
+    background-image: url(../../images/overlay.png), linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4);
+}
+
+#main-navigation .sf-menu {
+    background-color: null;
+}
+
+.article-more-link a {
+    color: #e37b7c;
+    font-weight: 700;
+}
+
+button,
+a.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-image: url(../../images/overlay.png), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+    background-color: #726193;
+    border: null;
+}
+
+.widget_athemes_social_icons li a [class^="fa"]:before {
+    background-color: #726193;
+}
+
+.widget-title {
+    border-bottom: 3px solid #e37b7c;
+}
+
+.widget_athemes_tabs .widget-tab-nav {
+    background-color: #726193;
+}
+
+.widget_athemes_tabs .widget-tab-nav li.active a {
+    color: #fff;
+    background-image: url(../../images/overlay.png), linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4);
+}
+
+a.article-title:hover {
+    color: #ffe4b4;
+    text-decoration: none;
+}
+
+button:hover,
+a.button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background: #ffe4b4;
+    border-color: #ffe4b4;
+}
