@@ -192,85 +192,42 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、this指向"><a href="#一、this指向" class="headerlink" title="一、this指向"></a>一、this指向</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">调用方式</th>
-<th style="text-align:center">this指向</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">普通函数调用</td>
-<td style="text-align:center">window</td>
-</tr>
-<tr>
-<td style="text-align:center">构造函数调用</td>
-<td style="text-align:center">实例对象，原型对象的方法也指向实例对象</td>
-</tr>
-<tr>
-<td style="text-align:center">对象方法调用</td>
-<td style="text-align:center">该方法所属于对象</td>
-</tr>
-<tr>
-<td style="text-align:center">时间绑定方法</td>
-<td style="text-align:center">绑定时间对象</td>
-</tr>
-<tr>
-<td style="text-align:center">定时器函数</td>
-<td style="text-align:center">window</td>
-</tr>
-<tr>
-<td style="text-align:center">立即执行函数</td>
-<td style="text-align:center">window</td>
-</tr>
-</tbody>
-</table>
-<h2 id="二、改变this指向的几种方法"><a href="#二、改变this指向的几种方法" class="headerlink" title="二、改变this指向的几种方法"></a>二、改变this指向的几种方法</h2><p>avaScript 为我们专门提供了一些函数方法来帮我们更优雅的处理函数内部this的指向问题，常用的有call()、apply() 、bind()三种方法</p>
-<h3 id="1-call方法"><a href="#1-call方法" class="headerlink" title="1.call方法"></a>1.call方法</h3><p>一般就是上下文中thisArs所指向的对象不是该函数的调用者，我们依旧想调用这个函数就可以使用call方法，比如继承</p>
-<p><strong>方式：fun.call(thisArg, arg1, arg2, …)；</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params">uname,age</span>) </span>&#123;</span><br><span class="line">			<span class="comment">// this指向父类的实例对象</span></span><br><span class="line">			<span class="keyword">this</span>.uname = uname;</span><br><span class="line">			<span class="keyword">this</span>.age = age;</span><br><span class="line">			<span class="comment">// 只要把父类的this指向子类的this既可</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params">uname, age,score</span>) </span>&#123;</span><br><span class="line">			<span class="comment">// this指向子类构造函数</span></span><br><span class="line">			<span class="comment">// this.uname = uname;</span></span><br><span class="line">			<span class="comment">// this.age = age;</span></span><br><span class="line">			<span class="comment">// Father(uname,age);</span></span><br><span class="line">			Father.call(<span class="keyword">this</span>,uname,age);</span><br><span class="line">			<span class="keyword">this</span>.score = score;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-apply方法"><a href="#2-apply方法" class="headerlink" title="2.apply方法"></a>2.apply方法</h3><p>apply方法和call类似，只是传参数的时候不是一个一个传进去，而是以数组的形式传递。如果不想改变this指向，就传递null到函数中</p>
-<p><strong>方式：fun.apply(thisArg, [argsArray])</strong> </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">23</span>,<span class="number">45</span>,<span class="number">56</span>,<span class="number">23</span>,<span class="number">54</span>];</span><br><span class="line"><span class="comment">//Math.max()方法本来是需要传递一系列参数的，Math,max(1,9,3),调用apply则传递数组</span></span><br><span class="line"><span class="keyword">var</span> n = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>,arr);</span><br><span class="line"><span class="built_in">console</span>.log(n);</span><br></pre></td></tr></table></figure>
-<h3 id="3-bind方法"><a href="#3-bind方法" class="headerlink" title="3.bind方法"></a>3.bind方法</h3><p>bind() 方法不会调用函数。但是能改变函数内部this 指向，也就是说想调用还需要再次调用，在后面加上（)。</p>
-<p><strong>方式：fun.bind(thisArg, arg1, arg2, …);</strong></p>
-<p>fs.call(this,a,b)和fs.bind(this,a,b)()是等价的，需要注意第二个后面多了一个()，表示立马执行</p>
-<p>实现一个点击某按钮，禁止该按钮，2s后该按钮又不被禁止的功能，可以使用bind函数改变定时器this指向，因为定时器this默认是指向window，所以需要改变指针指向，同时定时器每隔一段时间都会自动触发，所以采用bind只改变定时器指针而不立即执行代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'input'</span>);</span><br><span class="line">	btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.disabled = <span class="literal">true</span>;</span><br><span class="line">		<span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.disabled = <span class="literal">false</span>;</span><br><span class="line">		&#125;.bind(btn),<span class="number">2000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三、3种方法总结"><a href="#三、3种方法总结" class="headerlink" title="三、3种方法总结"></a>三、3种方法总结</h2><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>调用方式</th>
-<th>区别</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>call()</td>
-<td>fun.call(obj,arg1,arg2……)</td>
-<td>传递的参数不一样, call 传递参数aru1, aru2..</td>
-</tr>
-<tr>
-<td>apply()</td>
-<td>fun.apply(obj,[a,b,c])</td>
-<td>apply 必须数组形式[arg]</td>
-</tr>
-<tr>
-<td>bind()</td>
-<td>fun.bind(obj,arg1,arg2……)</td>
-<td>不会调用函数, 可以改变函数内部this指向</td>
-</tr>
-</tbody>
-</table>
-<p><strong>主要应用场景:</strong>  </p>
-<ul>
-<li>cal经常做继承. </li>
-<li>apply 经常跟数组有关系.比如借助于数学对象实现数组最大值最小值</li>
-<li>不调用函数,但是还想改变this指向. 比如改变定时器内部的this指向</li>
-</ul>
+        
+          <div class="entry-thumbnail">
+            <a href="2020/07/24/call-bink-apply方法区别与应用/"><img width="250" height="175" src="gallery/call-applly-bind.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+          </div>
+          <div class="entry-summary">
+          JavaScript 为我们专门提供了一些函数方法来帮我们更优雅的处理函数内部this的指向问题，常用的有call()、apply() 、bind()三种方法。我总结了这三种方法的相同点和不同点
 
+一、this指向
+
+
+调用方式
+this指向
+
+
+
+
+普通函数调用
+window
+
+
+构造函数调用
+实例对象，原型对象的方法也指向实例对象
+
+
+对象方法调用
+该方法所属于对象
+
+
+时间绑定方法
+绑...
+
+        
+          <p class="article-more-link">
+            <a href="2020/07/24/call-bink-apply方法区别与应用/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
