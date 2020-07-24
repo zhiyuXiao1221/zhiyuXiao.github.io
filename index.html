@@ -168,6 +168,133 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-call-bink-apply方法区别与应用"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="2020/07/24/call-bink-apply方法区别与应用/">call,bind,apply方法区别与应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="2020/07/24/call-bink-apply方法区别与应用/" class="article-date">
+	  <time datetime="2020-07-24T06:32:47.000Z" itemprop="datePublished">July 24, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、this指向"><a href="#一、this指向" class="headerlink" title="一、this指向"></a>一、this指向</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">调用方式</th>
+<th style="text-align:center">this指向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">普通函数调用</td>
+<td style="text-align:center">window</td>
+</tr>
+<tr>
+<td style="text-align:center">构造函数调用</td>
+<td style="text-align:center">实例对象，原型对象的方法也指向实例对象</td>
+</tr>
+<tr>
+<td style="text-align:center">对象方法调用</td>
+<td style="text-align:center">该方法所属于对象</td>
+</tr>
+<tr>
+<td style="text-align:center">时间绑定方法</td>
+<td style="text-align:center">绑定时间对象</td>
+</tr>
+<tr>
+<td style="text-align:center">定时器函数</td>
+<td style="text-align:center">window</td>
+</tr>
+<tr>
+<td style="text-align:center">立即执行函数</td>
+<td style="text-align:center">window</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二、改变this指向的几种方法"><a href="#二、改变this指向的几种方法" class="headerlink" title="二、改变this指向的几种方法"></a>二、改变this指向的几种方法</h2><p>avaScript 为我们专门提供了一些函数方法来帮我们更优雅的处理函数内部this的指向问题，常用的有call()、apply() 、bind()三种方法</p>
+<h3 id="1-call方法"><a href="#1-call方法" class="headerlink" title="1.call方法"></a>1.call方法</h3><p>一般就是上下文中thisArs所指向的对象不是该函数的调用者，我们依旧想调用这个函数就可以使用call方法，比如继承</p>
+<p><strong>方式：fun.call(thisArg, arg1, arg2, …)；</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span> (<span class="params">uname,age</span>) </span>&#123;</span><br><span class="line">			<span class="comment">// this指向父类的实例对象</span></span><br><span class="line">			<span class="keyword">this</span>.uname = uname;</span><br><span class="line">			<span class="keyword">this</span>.age = age;</span><br><span class="line">			<span class="comment">// 只要把父类的this指向子类的this既可</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">Son</span> (<span class="params">uname, age,score</span>) </span>&#123;</span><br><span class="line">			<span class="comment">// this指向子类构造函数</span></span><br><span class="line">			<span class="comment">// this.uname = uname;</span></span><br><span class="line">			<span class="comment">// this.age = age;</span></span><br><span class="line">			<span class="comment">// Father(uname,age);</span></span><br><span class="line">			Father.call(<span class="keyword">this</span>,uname,age);</span><br><span class="line">			<span class="keyword">this</span>.score = score;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-apply方法"><a href="#2-apply方法" class="headerlink" title="2.apply方法"></a>2.apply方法</h3><p>apply方法和call类似，只是传参数的时候不是一个一个传进去，而是以数组的形式传递。如果不想改变this指向，就传递null到函数中</p>
+<p><strong>方式：fun.apply(thisArg, [argsArray])</strong> </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">23</span>,<span class="number">45</span>,<span class="number">56</span>,<span class="number">23</span>,<span class="number">54</span>];</span><br><span class="line"><span class="comment">//Math.max()方法本来是需要传递一系列参数的，Math,max(1,9,3),调用apply则传递数组</span></span><br><span class="line"><span class="keyword">var</span> n = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>,arr);</span><br><span class="line"><span class="built_in">console</span>.log(n);</span><br></pre></td></tr></table></figure>
+<h3 id="3-bind方法"><a href="#3-bind方法" class="headerlink" title="3.bind方法"></a>3.bind方法</h3><p>bind() 方法不会调用函数。但是能改变函数内部this 指向，也就是说想调用还需要再次调用，在后面加上（)。</p>
+<p><strong>方式：fun.bind(thisArg, arg1, arg2, …);</strong></p>
+<p>fs.call(this,a,b)和fs.bind(this,a,b)()是等价的，需要注意第二个后面多了一个()，表示立马执行</p>
+<p>实现一个点击某按钮，禁止该按钮，2s后该按钮又不被禁止的功能，可以使用bind函数改变定时器this指向，因为定时器this默认是指向window，所以需要改变指针指向，同时定时器每隔一段时间都会自动触发，所以采用bind只改变定时器指针而不立即执行代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'input'</span>);</span><br><span class="line">	btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.disabled = <span class="literal">true</span>;</span><br><span class="line">		<span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.disabled = <span class="literal">false</span>;</span><br><span class="line">		&#125;.bind(btn),<span class="number">2000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三、3种方法总结"><a href="#三、3种方法总结" class="headerlink" title="三、3种方法总结"></a>三、3种方法总结</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>调用方式</th>
+<th>区别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>call()</td>
+<td>fun.call(obj,arg1,arg2……)</td>
+<td>传递的参数不一样, call 传递参数aru1, aru2..</td>
+</tr>
+<tr>
+<td>apply()</td>
+<td>fun.apply(obj,[a,b,c])</td>
+<td>apply 必须数组形式[arg]</td>
+</tr>
+<tr>
+<td>bind()</td>
+<td>fun.bind(obj,arg1,arg2……)</td>
+<td>不会调用函数, 可以改变函数内部this指向</td>
+</tr>
+</tbody>
+</table>
+<p><strong>主要应用场景:</strong>  </p>
+<ul>
+<li>cal经常做继承. </li>
+<li>apply 经常跟数组有关系.比如借助于数学对象实现数组最大值最小值</li>
+<li>不调用函数,但是还想改变this指向. 比如改变定时器内部的this指向</li>
+</ul>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="categories/前端/">前端</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Java-script/">Java script</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
     <article id="post-ES5以及ES6构造和继承的对比"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -197,9 +324,7 @@ var themeMenus = {};
             <a href="2020/07/23/ES5以及ES6构造和继承的对比/"><img width="250" height="175" src="gallery/原型链2.png" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
           </div>
           <div class="entry-summary">
-          在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念。
-ES6，全称ECMAScript6.0 ，2015.06 发版。但是目前浏览器的JavaScript 是ES5 版本，大多数高版本的浏览器也支持ES6，不过只实现了ES6 的部分特性和功能。
-在ES6之前，对象不是基于类创建的，而是用一种称为构建函数的特殊...
+          在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来定义对象和它们的特征。在ES6中，全称ECMAScript6.0 ，能够直接创建类，虽然高版本的浏览器也支持ES6，目前很多浏览器的JavaScript 是ES5 版本，因此了解ES5类创建的过程也是很...
 
         
           <p class="article-more-link">
@@ -608,65 +733,11 @@ Artificial intelligence has the power...
     
 
   
-    <article id="post-Gallery-Example"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="2016/01/26/Gallery-Example/">Gallery Example</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="2016/01/26/Gallery-Example/" class="article-date">
-	  <time datetime="2016-01-26T13:55:37.000Z" itemprop="datePublished">January 26, 2016</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-          <div class="entry-thumbnail">
-            <a href="2016/01/26/Gallery-Example/"><img width="250" height="175" src="https://www.hdwallpapers.net/previews/starry-night-over-corsica-986.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          To add a photo gallery placeholder to your post, just add the following lines to your front-matter:1234photos:- https://www.hdwallpapers.net/previews/starry-night-over-corsica-986.jpg- https://www....
-
-        
-          <p class="article-more-link">
-            <a href="2016/01/26/Gallery-Example/#more">Continue Reading →</a>
-          </p>
-        </div>
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-    
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="extend next" rel="next" href="page/2/">Next</a>
+    <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><a class="extend next" rel="next" href="page/2/">Next</a>
   </nav>
 
 </section>
@@ -788,6 +859,21 @@ Artificial intelligence has the power...
 
             
               <div class="widget-entry-thumbnail">
+                <a href="2020/07/24/call-bink-apply方法区别与应用/" title=""><img width="50" height="50" src="gallery/call-applly-bind.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+              </div>
+              <div class="widget-entry-summary">
+            
+
+              <h6 style="margin: 0;"><a href="2020/07/24/call-bink-apply方法区别与应用/">call,bind,apply方法区别与应用</a></h6>
+              <span>July 24, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-thumbnail">
                 <a href="2020/07/23/ES5以及ES6构造和继承的对比/" title=""><img width="50" height="50" src="gallery/原型链2.png" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
               </div>
               <div class="widget-entry-summary">
@@ -859,21 +945,6 @@ Artificial intelligence has the power...
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-thumbnail">
-                <a href="2016/08/14/【Machine Learning】机器学习：简明入门指南/" title=""><img width="50" height="50" src="http://img.blog.csdn.net/20160814170910665" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
-              </div>
-              <div class="widget-entry-summary">
-            
-
-              <h6 style="margin: 0;"><a href="2016/08/14/【Machine Learning】机器学习：简明入门指南/">【Machine Learning】机器学习：简明入门指南</a></h6>
-              <span>August 14, 2016</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -883,7 +954,7 @@ Artificial intelligence has the power...
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="categories/AI/">AI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="categories/LifeStyle/">LifeStyle</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Technology/">Technology</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="categories/Technology/Github/">Github</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="categories/lifeStyle/">lifeStyle</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="categories/lifeStyle/markup/">markup</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="categories/前端/">前端</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="categories/AI/">AI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="categories/LifeStyle/">LifeStyle</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="categories/Technology/">Technology</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="categories/Technology/Github/">Github</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="categories/lifeStyle/">lifeStyle</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="categories/lifeStyle/markup/">markup</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="categories/前端/">前端</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -893,7 +964,7 @@ Artificial intelligence has the power...
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Java-script/">Java script</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Research/">Research</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/sticky/">sticky</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/template/">template</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Java-script/">Java script</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Machine-Learning/">Machine Learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/Research/">Research</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/sticky/">sticky</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="tags/template/">template</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -903,7 +974,7 @@ Artificial intelligence has the power...
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="tags/Java/" style="font-size: 10px;">Java</a> <a href="tags/Java-script/" style="font-size: 10px;">Java script</a> <a href="tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="tags/Research/" style="font-size: 10px;">Research</a> <a href="tags/markdown/" style="font-size: 10px;">markdown</a> <a href="tags/sticky/" style="font-size: 10px;">sticky</a> <a href="tags/template/" style="font-size: 10px;">template</a>
+      <a href="tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="tags/Java/" style="font-size: 10px;">Java</a> <a href="tags/Java-script/" style="font-size: 20px;">Java script</a> <a href="tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="tags/Research/" style="font-size: 10px;">Research</a> <a href="tags/markdown/" style="font-size: 10px;">markdown</a> <a href="tags/sticky/" style="font-size: 10px;">sticky</a> <a href="tags/template/" style="font-size: 10px;">template</a>
     </div>
   </div>
 
@@ -913,7 +984,7 @@ Artificial intelligence has the power...
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2015/02/">February 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2015/01/">January 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/07/">July 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2015/02/">February 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2015/01/">January 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 

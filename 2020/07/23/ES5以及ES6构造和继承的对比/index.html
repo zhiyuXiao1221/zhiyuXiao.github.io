@@ -21,19 +21,19 @@
   
   
   
-  <meta name="description" content="在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念。 ES6，全称ECMAScript6.0 ，2015.06 发版。但是目前浏览器的JavaScript 是ES5 版本，大多数高版本的浏览器也支持ES6，不过只实现了ES6 的部分特性和功能。 在ES6之前，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来">
+  <meta name="description" content="在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来定义对象和它们的特征。在ES6中，全称ECMAScript6.0 ，能够直接创建类，虽然高版本的浏览器也支持ES6，目前很多浏览器的JavaScript 是ES5 版本，因此了解ES5类创建的过程也是很重要的">
 <meta name="keywords" content="Java script">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES5和ES6类构造和继承的对比">
 <meta property="og:url" content="https://zhiyuXiao1221.github.io/2020/07/23/ES5以及ES6构造和继承的对比/index.html">
 <meta property="og:site_name" content="Zhiyu&#39;s blog">
-<meta property="og:description" content="在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念。 ES6，全称ECMAScript6.0 ，2015.06 发版。但是目前浏览器的JavaScript 是ES5 版本，大多数高版本的浏览器也支持ES6，不过只实现了ES6 的部分特性和功能。 在ES6之前，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来">
+<meta property="og:description" content="在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来定义对象和它们的特征。在ES6中，全称ECMAScript6.0 ，能够直接创建类，虽然高版本的浏览器也支持ES6，目前很多浏览器的JavaScript 是ES5 版本，因此了解ES5类创建的过程也是很重要的">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zhiyuxiao1221.github.io/2020/07/23/ES5以及ES6构造和继承的对比/gallery/原型链2.png">
-<meta property="og:updated_time" content="2020-07-23T07:10:40.945Z">
+<meta property="og:updated_time" content="2020-07-24T06:38:12.944Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES5和ES6类构造和继承的对比">
-<meta name="twitter:description" content="在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念。 ES6，全称ECMAScript6.0 ，2015.06 发版。但是目前浏览器的JavaScript 是ES5 版本，大多数高版本的浏览器也支持ES6，不过只实现了ES6 的部分特性和功能。 在ES6之前，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来">
+<meta name="twitter:description" content="在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来定义对象和它们的特征。在ES6中，全称ECMAScript6.0 ，能够直接创建类，虽然高版本的浏览器也支持ES6，目前很多浏览器的JavaScript 是ES5 版本，因此了解ES5类创建的过程也是很重要的">
 <meta name="twitter:image" content="https://zhiyuxiao1221.github.io/2020/07/23/ES5以及ES6构造和继承的对比/gallery/原型链2.png">
   
     <link rel="alternate" href="/atom.xml" title="Zhiyu&#39;s blog" type="application/atom+xml">
@@ -178,7 +178,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="../../../../gallery/原型链2.png" rel="gallery_ckcygws210007csv02gjzu5ya">
+      <a class="article-gallery-img fancybox" href="../../../../gallery/原型链2.png" rel="gallery_ckczw5fbp0001ccv077f24l9r">
         <img src="../../../../gallery/原型链2.png" itemprop="image">
       </a>
     
@@ -210,9 +210,7 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念。</p>
-<p>ES6，全称ECMAScript6.0 ，2015.06 发版。但是目前浏览器的JavaScript 是ES5 版本，大多数高版本的浏览器也支持ES6，不过只实现了ES6 的部分特性和功能。</p>
-<p>在ES6之前，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来定义对象和它们的特征。</p>
+        <p>在典型的OOP 的语言中（如Java），都存在类的概念，类就是对象的模板，对象就是类的实例，但在ES6之前，JS 中并没用引入类的概念，对象不是基于类创建的，而是用一种称为构建函数的特殊函数来定义对象和它们的特征。在ES6中，全称ECMAScript6.0 ，能够直接创建类，虽然高版本的浏览器也支持ES6，目前很多浏览器的JavaScript 是ES5 版本，因此了解ES5类创建的过程也是很重要的</p>
 <a id="more"></a>
 <h2 id="一、ES5类的构造、继承（涉及原型链）"><a href="#一、ES5类的构造、继承（涉及原型链）" class="headerlink" title="一、ES5类的构造、继承（涉及原型链）"></a>一、ES5类的构造、继承（涉及原型链）</h2><h3 id="1-ES5的构造"><a href="#1-ES5的构造" class="headerlink" title="1.ES5的构造"></a>1.ES5的构造</h3><p>JavaScript 规定，每一个构造函数都有一个prototype 属性，指向另一个对象。注意这个prototype 就是一个对象，这个对象的所有属性和方法，都会被构造函数所拥有。可以把那些不变的方法，直接定义在prototype 对象上，这样所有对象的实例就可以共享这些方法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">uname,age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.uname = uname;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line">	<span class="comment">//sing方法属于不变的方法，放在prototype里面</span></span><br><span class="line">	Person.prototype.sing = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.uname + <span class="string">'在唱歌'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> obj = <span class="keyword">new</span> Person(<span class="string">'小名'</span>,<span class="number">22</span>);</span><br><span class="line">    <span class="comment">//静态成员：在构造函数本身添加的成员叫做静态成员</span></span><br><span class="line">	Person.tag = <span class="string">"people"</span>;</span><br><span class="line">	<span class="comment">//实例成员：在构造函数内部创建的成员成为实例成员，是由实例化对象来访问</span></span><br><span class="line">	obj.tag = <span class="string">"People"</span>;</span><br></pre></td></tr></table></figure>
@@ -301,6 +299,15 @@ var a = new Donate({
   
     
 <nav id="article-nav">
+  
+    <a href="../../24/call-bink-apply方法区别与应用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          call,bind,apply方法区别与应用
+        
+      </div>
+    </a>
   
   
     <a href="../../../../2016/11/20/Being-Outside-in-Fresh-Air-and-How-Your-Body-Loves-It/" id="article-nav-older" class="article-nav-link-wrap">
