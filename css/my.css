@@ -127,12 +127,6 @@ input[type="submit"]:hover {
     color: #726193;
 }
 
-.article-header h1 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #16171b;
-}
-
 .nav>li>a {
     color: #726193;
 }
