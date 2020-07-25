@@ -123,9 +123,30 @@ input[type="submit"]:hover {
     color: #726193;
 }
 
-.widget a {
+.widget li a {
     color: #726193;
-    text-decoration: none;
+}
+
+.article-header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #16171b;
+}
+
+.nav>li>a {
+    color: #726193;
+}
+
+.nav>li>a ：hover {
+    color: #ffe4b4;
+}
+
+.nav-link {
+    color: #726193;
+}
+
+.nav-link：hover {
+    color: #ffe4b4;
 }
 
 /* 手机 */
