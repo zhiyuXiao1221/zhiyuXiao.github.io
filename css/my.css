@@ -33,6 +33,9 @@ input[type="submit"] {
 .widget_athemes_social_icons li a [class^="fa"]:before {
     background-color: #726193;
 }
+/* .widget li a:hover {
+    color: #ffe4b4;
+} */
 
 .widget-title {
     border-bottom: 3px solid #e37b7c;
@@ -94,5 +97,31 @@ input[type="submit"]:hover {
 
 .widget a:hover {
     color: #e37b7c;
+    text-decoration: none;
+}
+
+.entry-footer {
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(to right, #ffe4b4, #726193, #e37b7c, #ffe4b4) 1 10;
+}
+
+.article-header h1 a {
+    color: #726193;
+}
+
+.widget-title {
+    color: #726193;
+}
+
+.widget_athemes_tabs .widget ul {
+    background: none;
+    border: 1px solid #e6e6e6;
+}
+
+.widget_athemes_tabs .widget ul li a {
+    color: #726193;
+}
+.widget a {
+    color: #726193;
     text-decoration: none;
 }
