@@ -33,6 +33,7 @@ input[type="submit"] {
 .widget_athemes_social_icons li a [class^="fa"]:before {
     background-color: #726193;
 }
+
 /* .widget li a:hover {
     color: #ffe4b4;
 } */
@@ -121,7 +122,15 @@ input[type="submit"]:hover {
 .widget_athemes_tabs .widget ul li a {
     color: #726193;
 }
+
 .widget a {
     color: #726193;
     text-decoration: none;
+}
+
+/* 手机 */
+.nav-open,
+.nav-close {
+    color: #ffe4b4;
+    background: #726193;
 }
